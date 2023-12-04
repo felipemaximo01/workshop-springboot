@@ -16,6 +16,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.maximodev.springproduto.entities.User;
 import com.maximodev.springproduto.service.UserService;
+import org.springframework.web.bind.annotation.PutMapping;
+
 
 @RestController
 @RequestMapping(value = "/users")
@@ -47,5 +49,11 @@ public class UserResource {
     public ResponseEntity<Void> delete(@PathVariable Long id){
         userService.delete(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping(value="/{id}")
+    public ResponseEntity<User> update(@PathVariable Long id, @RequestBody User objUser) {
+        objUser = userService.update(id, objUser);
+        return ResponseEntity.ok().body(objUser);
     }
 }
