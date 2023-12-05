@@ -5,7 +5,7 @@
 
 O projeto é uma aplicação backend desenvolvida durante o curso de java completo do Prof. Nelio Alves.
 
-O desenvolvimento da aplicação teve como o objetivo apreendar e melhorar:
+O desenvolvimento da aplicação teve como o objetivo aprender e melhorar:
  - Criar projeto Spring Boot Java;
  - Implementar modelo de domínio;
  - Estruturar camadas lógicas: resource, service, repository;
