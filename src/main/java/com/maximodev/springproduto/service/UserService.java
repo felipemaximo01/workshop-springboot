@@ -13,6 +13,8 @@ import com.maximodev.springproduto.repositories.UserRepository;
 import com.maximodev.springproduto.service.exceptions.DatabaseException;
 import com.maximodev.springproduto.service.exceptions.ResouceNotFoundException;
 
+import jakarta.persistence.EntityNotFoundException;
+
 @Service
 public class UserService {
 
@@ -37,15 +39,19 @@ public class UserService {
             userRepository.deleteById(id);
         } catch (EmptyResultDataAccessException e) {
             throw new ResouceNotFoundException(id);
-        } catch(DataIntegrityViolationException e){
+        } catch (DataIntegrityViolationException e) {
             throw new DatabaseException(e.getMessage());
         }
     }
 
     public User update(Long id, User objUser) {
-        User entity = userRepository.getReferenceById(id);
-        updateData(entity, objUser);
-        return userRepository.save(entity);
+        try {
+            User entity = userRepository.getReferenceById(id);
+            updateData(entity, objUser);
+            return userRepository.save(entity);
+        } catch (EntityNotFoundException e) {
+            throw new ResouceNotFoundException(id);
+        }
     }
 
     private void updateData(User entity, User objUser) {
