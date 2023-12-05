@@ -14,7 +14,7 @@ O desenvolvimento da aplicação teve como o objetivo aprender e melhorar:
  - CRUD - Create, Retrieve, Update, Delete;
  - Tratamento de exceções.
 
-## Modelo conceitual
+## modelo de domínio
 ![Modelo Conceitual](https://github.com/felipemaximo01/workshop-springboot/blob/main/assets/ModeloDeDominio.jpg)
 
 # Tecnologias utilizadas
