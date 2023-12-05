@@ -14,7 +14,7 @@ O desenvolvimento da aplicação teve como o objetivo aprender e melhorar:
  - CRUD - Create, Retrieve, Update, Delete;
  - Tratamento de exceções.
 
-## modelo de domínio
+## Modelo de domínio
 ![Modelo Conceitual](https://github.com/felipemaximo01/workshop-springboot/blob/main/assets/ModeloDeDominio.jpg)
 
 # Tecnologias utilizadas
@@ -31,10 +31,9 @@ Pré-requisitos: Java 21
 
 ```bash
 # clonar repositório
-git clone https://github.com/devsuperior/sds1-wmazoni
+git clone https://github.com/felipemaximo01/workshop-springboot
 
-# entrar na pasta do projeto back end
-cd backend
+# entrar na pasta do projeto
 
 # executar o projeto
 ./mvnw spring-boot:run
@@ -44,4 +43,4 @@ cd backend
 
 Felipe Maximo Colen
 
-[https://www.linkedin.com/in/wmazoni](https://www.linkedin.com/in/felipemaximo01/)https://www.linkedin.com/in/felipemaximo01/
+https://www.linkedin.com/in/felipemaximo01/
